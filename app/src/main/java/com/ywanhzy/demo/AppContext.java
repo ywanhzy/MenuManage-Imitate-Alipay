@@ -22,16 +22,7 @@ import java.util.Properties;
 public class AppContext extends Application {
 	private static Context context;
 	private static final int CACHE_TIME = 60 * 60000;// 缓存失效时间
-
-	private boolean login = false; // 登录状态
-
 	private Hashtable<String, Object> memCacheRegion = new Hashtable<String, Object>();
-
-	private String saveImagePath;// 保存图片路径
-
-	public int iType = 0; // 首页切换判断参数
-	private String loginUid = ""; // 登录用户的id
-	private String token = "";
 
 	@Override
 	public void onCreate() {

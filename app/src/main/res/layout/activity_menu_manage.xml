@@ -7,7 +7,7 @@
     <include
         android:id="@+id/common"
         layout="@layout/common_top" />
-    <com.ywanhzy.drag.DragForScrollView
+    <com.ywanhzy.demo.drag.DragForScrollView
         android:id="@+id/sv_index"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -52,16 +52,16 @@
                 android:layout_height="0.1dp"
                 android:background="#e5e5e5" />
 
-            <com.ywanhzy.drag.DragGridView
+            <com.ywanhzy.demo.drag.DragGridView
                 android:id="@+id/gridview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:horizontalSpacing="0.5dp"
                 android:numColumns="4"
                 android:verticalSpacing="0.5dp" >
-            </com.ywanhzy.drag.DragGridView>
+            </com.ywanhzy.demo.drag.DragGridView>
 
-            <com.ywanhzy.demo.CustomExpandableListView
+            <com.ywanhzy.demo.widget.CustomExpandableListView
                 android:id="@+id/expandableListView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -71,6 +71,6 @@
                 android:dividerHeight="0dp"
                 android:listSelector="@android:color/transparent" />
         </LinearLayout>
-    </com.ywanhzy.drag.DragForScrollView>
+    </com.ywanhzy.demo.drag.DragForScrollView>
 
 </LinearLayout>

@@ -16,7 +16,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
-                <com.ywanhzy.drag.LineGridView
+                <com.ywanhzy.demo.widget.LineGridView
                     android:id="@+id/gv_lanuch_start"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

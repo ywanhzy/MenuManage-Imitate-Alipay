@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.ywanhzy.demo.MainActivity">
+        <activity android:name="com.ywanhzy.demo.ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.ywanhzy.demo.MeunManageActivity"
+            android:name="com.ywanhzy.demo.ui.MenuManageActivity"
             android:screenOrientation="portrait" />
     </application>
 

@@ -1,4 +1,4 @@
-package com.ywanhzy.demo;
+package com.ywanhzy.demo.adapter;
 
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -8,7 +8,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.ywanhzy.drag.DragAdapterInterface;
+import com.ywanhzy.demo.AppConfig;
+import com.ywanhzy.demo.AppContext;
+import com.ywanhzy.demo.R;
+import com.ywanhzy.demo.drag.DragAdapterInterface;
+import com.ywanhzy.demo.entity.MenuEntity;
+import com.ywanhzy.demo.ui.MenuManageActivity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -17,17 +22,17 @@ import java.util.List;
 
 public class MyAdapter extends BaseAdapter implements DragAdapterInterface {
 	private boolean IsEdit = false;
-	private List<IndexData> datas = new ArrayList<IndexData>();
-	private MeunManageActivity context;
+	private List<MenuEntity> datas = new ArrayList<MenuEntity>();
+	private MenuManageActivity context;
 	private AppContext appContext;
 
-	public MyAdapter(MeunManageActivity context, AppContext appContext, List<IndexData> datas) {
+	public MyAdapter(MenuManageActivity context, AppContext appContext, List<MenuEntity> datas) {
 		this.context = context;
 		this.appContext = appContext;
 		this.datas = datas;
 	}
 
-	public void setDatas(List<IndexData> datas) {
+	public void setDatas(List<MenuEntity> datas) {
 		this.datas.clear();
 		this.datas.addAll(datas);
 	}
@@ -49,7 +54,7 @@ public class MyAdapter extends BaseAdapter implements DragAdapterInterface {
 
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
-		IndexData bean = datas.get(position);
+		MenuEntity bean = datas.get(position);
 		Holder holder;
 		if (convertView == null) {
 			holder = new Holder();
@@ -98,7 +103,7 @@ public class MyAdapter extends BaseAdapter implements DragAdapterInterface {
 	@Override
 	public void reOrder(int startPosition, int endPosition) {
 		if (endPosition < datas.size()) {
-			IndexData object = datas.remove(startPosition);
+			MenuEntity object = datas.remove(startPosition);
 			datas.add(endPosition, object);
 			String key = AppConfig.KEY_USER_TEMP;
 			appContext.saveObject((Serializable) datas, key);
@@ -112,7 +117,7 @@ public class MyAdapter extends BaseAdapter implements DragAdapterInterface {
 	}
 
 	public void getDatas() {
-		for (IndexData data : datas) {
+		for (MenuEntity data : datas) {
 			// DebugLog.i("点击 Item " + data.getId());
 		}
 	}
