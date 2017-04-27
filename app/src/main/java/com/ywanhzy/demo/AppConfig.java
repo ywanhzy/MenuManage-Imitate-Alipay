@@ -15,7 +15,7 @@ import java.util.Properties;
 @SuppressLint("NewApi")
 public class AppConfig {
 	public static String APP_ID = "1104510714";
-	private final static String APP_CONFIG = "config";
+	private final static String APP_CONFIG = "config"; 
 	public final static String KEY_USER = "Users";
 	public final static String KEY_USER_TEMP = "UsersTemp";//临时保存
 	public final static String KEY_All = "All";
